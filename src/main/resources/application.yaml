@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: EHR
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:ehrdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+app:
+  upload:
+    max-size: 52428800
